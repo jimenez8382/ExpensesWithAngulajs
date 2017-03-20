@@ -56,3 +56,7 @@ D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\System.Web.Optimization
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\WebGrease.dll
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Antlr3.Runtime.pdb
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\System.Web.Optimization.xml
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.dll
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.SqlServer.dll
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.xml
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.SqlServer.xml
