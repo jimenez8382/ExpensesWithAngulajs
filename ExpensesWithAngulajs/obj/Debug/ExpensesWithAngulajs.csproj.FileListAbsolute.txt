@@ -49,7 +49,6 @@ D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Newtonsoft.Json.xml
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\System.Net.Http.Formatting.xml
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\System.Web.Http.xml
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\System.Web.Http.WebHost.xml
-D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\obj\Debug\ExpensesWithAngulajs.csprojResolveAssemblyReference.cache
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\obj\Debug\ExpensesWithAngulajs.dll
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\obj\Debug\ExpensesWithAngulajs.pdb
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Antlr3.Runtime.dll
