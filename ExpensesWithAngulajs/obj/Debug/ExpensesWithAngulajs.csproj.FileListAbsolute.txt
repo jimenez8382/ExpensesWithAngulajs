@@ -60,3 +60,4 @@ D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.dll
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.SqlServer.dll
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.xml
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.SqlServer.xml
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\obj\Debug\ExpensesWithAngulajs.csprojResolveAssemblyReference.cache
