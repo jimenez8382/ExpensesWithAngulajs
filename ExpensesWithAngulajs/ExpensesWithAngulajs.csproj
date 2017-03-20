@@ -154,9 +154,16 @@
     <Content Include="app\appAngularExpenses.js" />
     <Content Include="app\components\expenses\expenses.html" />
     <Content Include="app\components\expenses\expensesController.js" />
+    <Content Include="app\components\shared\DataGridService.js" />
+    <Content Include="app\components\shared\modalDialog.html" />
+    <Content Include="app\components\shared\modalDialog.js" />
+    <Content Include="app\components\shared\notification.html" />
+    <Content Include="app\components\shared\notificationDirective.js" />
+    <Content Include="app\components\shared\webAPIServices.js" />
     <Content Include="app\routes.js" />
     <Content Include="Content\angular-block-ui.css" />
     <Content Include="Content\angular-block-ui.min.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\materialize\css\materialize.css" />
@@ -273,7 +280,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\components\shared\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

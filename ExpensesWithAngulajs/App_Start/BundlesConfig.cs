@@ -17,6 +17,7 @@ namespace ExpensesWithAngulajs.App_Start
         private static void RegisterStyles(BundleCollection bundles)
         {
             bundles.Add(new StyleBundle("~/Styles").Include("~/Content/bootstrap.min.css")
+                .Include("~/Content/bootstrap-theme.min.css")
                     .Include("~/Content/materialize/css/materialize.min.css")
                     .Include("~/Content/angular-block-ui.min.css")
                     .Include("~/Content/Site.css")
@@ -26,7 +27,7 @@ namespace ExpensesWithAngulajs.App_Start
         private static void RegisterScripts(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include("~/Scripts/jquery-{version}.js"));
-            bundles.Add(new ScriptBundle("~/bundles/js").Include("~/Content/js/bootstrap.min.js")
+            bundles.Add(new ScriptBundle("~/bundles/js").Include("~/Scripts/bootstrap.min.js")
                 .Include("~/Scripts/materialize/materialize.min.js"));
         }
         private static void RegisterAngularJs(BundleCollection bundles)

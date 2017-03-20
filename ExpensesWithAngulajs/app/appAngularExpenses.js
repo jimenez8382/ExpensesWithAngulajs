@@ -1,6 +1,5 @@
 ﻿/* Application */
-var app = angular.module('appAngularExpenses', ['ngRoute', 'bw.paging', 'blockUI', 'ui.materialize', 'appControllers']);
-
+var app = angular.module('appAngularExpenses', ['ngRoute', 'bw.paging', 'blockUI', 'ui.materialize', 'appControllers', 'appApiServices', 'appDirectives', 'appDataGridService', 'ngLocationUpdate']);
 app.config([
     '$compileProvider',
     function ($compileProvider) {

@@ -2,9 +2,94 @@
 <html>
 <head>
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 </head>
 <body>
-    My list expenses
+    <modalcustom lolo="modal1" item="expenseItem" data-ng-click-ok-button="delete(expenseItem)"></modalcustom>
+    <!-- Modal -->
+    <notification alert="message" data-ng-click-close-button="CloseAlert(message.show)"></notification>
+
+    <div style="text-align:right">
+        <div id="data-table-row-grouping_wrapper" class="dataTables_wrapper no-footer">
+            <div id="data-table-row-grouping_processing" class="dataTables_processing" style="display: none;">
+                Processing...
+            </div>
+            <table datatable="ng" id="projects-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                    <tr style="border:none">
+                        <th colspan="1" style="width: 50%;border:none">
+                            <!--<span ng-bind="TotalRows"></span>&nbsp;Rows-->
+
+                            <div class="dataTables_length" id="data-table-row-grouping_length">
+                                <label>
+                                    Show
+                                    <select ng-model="expenses.pageSize" ng-change="expenses.refreshGridbyPagingsize(expenses.pageSize)" name="data-table-row-grouping_length" aria-controls="data-table-row-grouping" style="display:inline-block">
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="25">25</option>
+                                        <option value="35">35</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                        <option value="-1">All</option>
+                                    </select> entries
+                                </label>
+                            </div>
+                            <tt>
+                        </th>
+                        <th colspan="3" style="text-align: right; width: 50%;border:none">
+                            <!--Page&nbsp;<span ng-bind="currentPage"></span>&nbsp;of&nbsp;
+                            <span ng-bind="TotalPages"></span>-->
+
+                            <div id="data-table-row-grouping_filter" class="dataTables_filter">
+                                <label>Search:<input type="search" ng-model="expenses.search" ng-change="expenses.refreshGridbySearching(expenses.search)" class="" placeholder="" aria-controls="data-table-row-grouping"></label>
+                            </div>
+
+                        </th>
+
+                    </tr>
+
+                    <tr style="border:none">
+                        <th ng:repeat="tableHeader in expenses.tableHeaders" style="text-decoration:underline;border:none" ng:class="expenses.setSortIndicator(tableHeader.label)" ng:click="expenses.changeSorting(tableHeader.label)">{{tableHeader.label}}</th>
+                        <th style="border:none">
+                        </th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in expenses.Expenses">
+                        <td>{{item.Description}}</td>
+                        <td>{{item.Date | date}}</td>
+                        <td style="width:25%;text-align:right !important">{{item.Amount |currency }}</td>
+                        <td class="center">
+                            <a style="cursor:pointer" href="expense/{{item.Id}}" class="edit-button"><i class="Small material-icons">mode_edit</i></a>
+                            <i style="cursor:pointer" class="Small material-icons" data-ng-click="ConfirmDelte(item)" data-toggle="modal" data-target="#pop">delete</i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="text-align:right">
+            <paging page="currentPage"
+                    page-size="pageSize"
+                    total="TotalRows"
+                    text-first="first"
+                    text-last="last"
+                    text-next="next"
+                    text-prev="prev"
+                    text-title-page="Page {page} Hover Over"
+                    text-title-first="First hover"
+                    text-title-last="Last hover"
+                    text-title-next="Next hover"
+                    text-title-prev="Prev hover"
+                    show-prev-next="true"
+                    show-first-last="true"
+                    paging-action="refreshPaging(page)">
+            </paging>
+        </div>
+        <div class="col-md-4 right">
+            <br />
+            <a href="expense/add" class="waves-effect light-blue  btn">Add New</a>
+        </div>
+    </div>
 </body>
 </html>
