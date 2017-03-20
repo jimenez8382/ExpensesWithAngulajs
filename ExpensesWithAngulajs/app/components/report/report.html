@@ -1,0 +1,60 @@
+﻿
+<div class="row">
+    <form name="form" class="validate" role="form" enctype='multipart/form-data' novalidate>
+        <div class="card-panel">
+            <div class="row headerReport" style="display:inline">
+                <div class="input-field col s12">
+                    <h5>Expenses Report</h5>
+                </div>
+                <div class="Description input-field col s12">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">perm_contact_calendar</i>
+                    <input id="FiscalYear" ng-model="FiscalYear" ng-min="report.Expenses.MinYear" ng-max="report.Expenses.MaxYear" name="FiscalYear" value="" type="number" tabindex="1" move-next-on-enter required>
+                    <label ng-class="{'active': FiscalYear  >= 0}" for="FiscalYear">Type a valid period</label>
+                    <br />
+                    <span class="" ng-show="form.$invalid">The period should be from {{report.Expenses.MinYear}} to {{report.Expenses.MaxYear}}</span>
+                </div>
+                <div class="input-field col s6">
+                    <input class="btn cyan waves-effect waves-light right toolTip" data-ng-click="getExpenses()" type="button" value="Create Report" tabindex="2" ng-disabled="form.$invalid" />
+                    <a class="btn cyan waves-effect waves-light right" ng-show="report.Expenses.Expenses.length > 0" onClick="window.print();return false" href="#">Print</a>
+                </div>
+            </div>
+            <div class="row">
+                <div id="ReportContainer" class="input-field col s12">
+                    <table id="data-table-row-grouping" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th style="width:50%">Description</th>
+                                <th style="width:25%;text-align:right !important">Date</th>
+                                <th style="width:25%;text-align:right !important">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in report.Expenses.Expenses">
+                                <td>{{item.Description}}</td>
+                                <td style="width:25%;text-align:right !important">{{item.Date | date}}</td>
+                                <td style="width:25%;text-align:right !important">{{item.Amount |currency }}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align:right;font:bold;">
+                                    <b>Total</b>
+                                </td>
+                                <td style="text-align:right;font:bold;">
+                                    <b>
+                                        {{report.Expenses.TotalExpeses |currency }}
+                                    </b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</div>

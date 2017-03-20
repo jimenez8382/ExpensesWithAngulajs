@@ -156,6 +156,8 @@
     <Content Include="app\components\expenses\expenses.html" />
     <Content Include="app\components\expenses\expensesController.js" />
     <Content Include="app\components\expenses\expensesForm.html" />
+    <Content Include="app\components\report\report.html" />
+    <Content Include="app\components\report\reportController.js" />
     <Content Include="app\components\shared\DataGridService.js" />
     <Content Include="app\components\shared\datetimePicker.html" />
     <Content Include="app\components\shared\datetimePicker.js" />
@@ -249,6 +251,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\ExpensesController.cs" />
+    <Compile Include="Api\ReportController.cs" />
     <Compile Include="App_Start\BundlesConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -257,6 +260,7 @@
     <Compile Include="Data\ExpensesDbContext.cs" />
     <Compile Include="Data\Models\BaseEntity.cs" />
     <Compile Include="Data\Models\Expenses.cs" />
+    <Compile Include="Data\Models\ExpensesReportModel.cs" />
     <Compile Include="Data\Models\ExpensesViewModel.cs" />
     <Compile Include="Data\Models\Pagination.cs" />
     <Compile Include="Global.asax.cs">
@@ -287,6 +291,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Report\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

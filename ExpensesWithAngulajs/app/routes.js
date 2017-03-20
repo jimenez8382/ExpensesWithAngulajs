@@ -22,6 +22,12 @@ app.config(function ($routeProvider, $locationProvider) {
             controllerAs: 'expenseForm',
             templateUrl: 'app/components/expenses/expensesForm.html'
         })
+        .when('/report',
+        {
+            controller: 'reportController',
+            controllerAs: 'report',
+            templateUrl: 'app/components/report/report.html'
+        })
         // Default
         .when('/',
         {
