@@ -161,6 +161,7 @@
     <Content Include="app\components\shared\datetimePicker.js" />
     <Content Include="app\components\shared\modalDialog.html" />
     <Content Include="app\components\shared\modalDialog.js" />
+    <Content Include="app\components\shared\moveNextOnEnter.js" />
     <Content Include="app\components\shared\notification.html" />
     <Content Include="app\components\shared\notificationDirective.js" />
     <Content Include="app\components\shared\webAPIServices.js" />
