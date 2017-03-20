@@ -27,15 +27,24 @@ namespace ExpensesWithAngulajs.App_Start
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include("~/Scripts/jquery-{version}.js"));
             bundles.Add(new ScriptBundle("~/bundles/js").Include("~/Content/js/bootstrap.min.js")
-                .Include("~/Scripts/materializematerialize.min.js"));
+                .Include("~/Scripts/materialize/materialize.min.js"));
         }
         private static void RegisterAngularJs(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/angularJs")
-           .Include("~/Scripts/angular.min.js")
-           .Include("~/Scripts/angular-route.min.js")
+           .Include("~/Scripts/angular.js")
+           .Include("~/Scripts/angular-route.js")
            .Include("~/Scripts/angular-block-ui.min.js")
-           .Include("~/Scripts/angular-animate.min.js"));
+           .Include("~/Scripts/angular-animate.min.js")
+           .Include("~/Scripts/materialize/angular-materialize.min.js")
+           .Include("~/Scripts/paging.js")
+                .Include("~/Scripts/angular-location-update.js")
+               // Application scripts
+               .Include("~/app/appAngularExpenses.js",
+                        "~/app/routes.js")
+
+               // Include all components
+               .IncludeDirectory("~/app/components/", "*.js", true));
         }
     }
 }
