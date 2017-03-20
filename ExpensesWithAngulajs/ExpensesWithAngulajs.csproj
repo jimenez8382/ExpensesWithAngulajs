@@ -152,9 +152,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\appAngularExpenses.js" />
+    <Content Include="app\components\expenses\expenseFormController.js" />
     <Content Include="app\components\expenses\expenses.html" />
     <Content Include="app\components\expenses\expensesController.js" />
+    <Content Include="app\components\expenses\expensesForm.html" />
     <Content Include="app\components\shared\DataGridService.js" />
+    <Content Include="app\components\shared\datetimePicker.html" />
+    <Content Include="app\components\shared\datetimePicker.js" />
     <Content Include="app\components\shared\modalDialog.html" />
     <Content Include="app\components\shared\modalDialog.js" />
     <Content Include="app\components\shared\notification.html" />

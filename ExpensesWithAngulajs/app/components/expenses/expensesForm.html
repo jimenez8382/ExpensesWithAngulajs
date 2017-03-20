@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <form name="form" class="validate" role="form" enctype='multipart/form-data' novalidate>
+        <div class="row">
+            <notification alert="message" data-ng-click-close-button="CloseAlert(message.show)"></notification>
+            <nav class="light-blue lighten-1" role="navigation">
+                <div class="nav-wrapper container" style="position:absolute !important">
+                    {{Mode}}
+                </div>
+            </nav>
+            <div class="card-panel">
+                <div class="row">
+                    <div class="input-field col s6" ng-class="{'has-error': form.Date.$invalid, 'has-success': form.Date.$valid}">
+                        <i class="material-icons prefix">perm_contact_calendar</i>
+                        <datetimepickercustom tabindex="1" item="expense"></datetimepickercustom>
+                        <label ng-class="{'active': expense.Date.length  > 0}" for="Date">Date</label>
+                    </div>
+                    <div class="input-field col s6" ng-class="{'has-error': form.Amount.$invalid, 'has-success': form.Amount.$valid}">
+                        <i class="material-icons prefix">attach_money</i>
+                        <label for="Amount" ng-class="{'active':expense.Amount.length > 0}">Amount</label>
+                        <input type="number" tabindex="2" id="Amount" ng-model="expense.Amount" name="Amount" move-next-on-enter required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12" ng-class="{'has-error': form.Description.$invalid, 'has-success': form.Description.$valid}">
+                        <i class="material-icons prefix">comment</i>
+                        <label for="Description" ng-class="{'active': expense.Description.length > 0}">Comment</label>
+                        <textarea tabindex="3" id="Description" ng-model="expense.Description" name="Description" class="materialize-textarea" move-next-on-enter required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m4 l6">
+                    </div>
+
+                    <div class="col s12 m4 l2" ng-disabled="form.$invalid">
+                        <button type="button" tabindex="4" class="btn cyan waves-effect waves-light right waves-input-wrapper" ng-click="save(expense)" ng-disabled="form.$invalid">Save</button>
+                    </div>
+                    <div class="col s12 m4 l2">
+                        <button type="button" tabindex="5" class="btn cyan waves-effect waves-light right waves-input-wrapper" ng-click="New()">New</button>
+                    </div>
+                    <div class="col s12 m4 l2">
+                        <a class="btn cyan waves-effect waves-light right" tabindex="6" href="expenses">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

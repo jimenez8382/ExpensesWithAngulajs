@@ -10,6 +10,18 @@ app.config(function ($routeProvider, $locationProvider) {
             controllerAs: 'expenses',
             templateUrl: 'app/components/expenses/expenses.html'
         })
+        .when('/expense/add',
+        {
+            controller: 'expenseFormController',
+            controllerAs: 'expensesForm',
+            templateUrl: 'app/components/expenses/expensesForm.html'
+        })
+        .when('/expense/:expenseId',
+        {
+            controller: 'expenseFormController',
+            controllerAs: 'expenseForm',
+            templateUrl: 'app/components/expenses/expensesForm.html'
+        })
         // Default
         .when('/',
         {
