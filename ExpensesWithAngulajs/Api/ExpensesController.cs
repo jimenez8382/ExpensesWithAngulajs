@@ -30,7 +30,7 @@ namespace ExpensesWithAngulajs.Api
                 search = " ";
 
             //get the list with the Paging params
-            List<Expenses> ExpensesList = db.Expenses.OrderBy(orderExpresion).Skip((currentPageNumber - 1) * pageSize).Take(pageSize).ToList().Where(d => d.Description.Contains(search) || d.Amount.ToString().Contains(search) || d.Date.ToString().Contains(search)).ToList();
+            List<Expenses> ExpensesList = db.Expenses.OrderBy(orderExpresion).Skip((currentPageNumber - 1) * pageSize).Take(pageSize).ToList().Where(d => d.Description.ToLower().Contains(search.ToLower()) || d.Amount.ToString().ToLower().Contains(search.ToLower()) || d.Date.ToString().ToLower().Contains(search.ToLower())).ToList();
             long result;
             int totalPages;
 
