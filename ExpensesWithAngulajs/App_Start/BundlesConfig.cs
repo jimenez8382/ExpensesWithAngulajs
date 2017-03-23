@@ -31,7 +31,6 @@ namespace ExpensesWithAngulajs.App_Start
             bundles.Add(new ScriptBundle("~/bundles/js").Include("~/Scripts/bootstrap.min.js")
                 .Include("~/Scripts/materialize/materialize.min.js")
                 .Include("~/Scripts/jquery.signalR-2.1.2.min.js")
-                .Include("~/signalr/hubs")
                 );
         }
         private static void RegisterAngularJs(BundleCollection bundles)
