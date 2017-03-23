@@ -1,4 +1,6 @@
-﻿appControllers.controller('expenseFormController', function ($, $rootScope, $scope, webApiServices, $routeParams, $location) {
+﻿appControllers.controller('expenseFormController', function ($, $rootScope, $scope,signalRSvc, webApiServices, $routeParams, $location) {
+    signalRSvc.initialize();
+    //Updating greeting message after receiving a message through the event
     var exp = this;
     $scope.expense = {};
     $rootScope.successTextAlert = "";
@@ -25,6 +27,7 @@
             webApiServices.update('/api/Expenses/' + expense.Id, expense).then(// success
 
             function (d) {
+                signalRSvc.sendRequest();
             },// error
             function (error) { });
 
@@ -34,6 +37,7 @@
                 $scope.expense.Id = d.Id;//update the Id of the Expense added
                 $scope.Mode = 'Edit the expense # ' + d.Id;
                 $location.update_path('/expense/' + d.Id)
+                signalRSvc.sendRequest();
             },// error
             // error
             function (error) {

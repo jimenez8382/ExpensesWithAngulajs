@@ -60,4 +60,15 @@ D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.dll
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.SqlServer.dll
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.xml
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\EntityFramework.SqlServer.xml
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.Owin.dll
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.Owin.Security.dll
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Owin.dll
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.Owin.xml
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.Owin.Security.xml
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\obj\Debug\ExpensesWithAngulajs.csprojResolveAssemblyReference.cache

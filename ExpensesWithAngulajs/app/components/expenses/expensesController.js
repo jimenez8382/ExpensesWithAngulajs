@@ -1,7 +1,7 @@
-﻿appControllers.controller('expensesController', function ($, $rootScope, $scope, webApiServices, dataGridService) {
+﻿appControllers.controller('expensesController', function ($, $rootScope,signalRSvc, $scope, webApiServices, dataGridService) {
     var exp = this;
 
-
+    signalRSvc.initialize();
 
     // Initialize the main params.
     $scope.pageSize = 10;
@@ -113,4 +113,9 @@
         $scope.search = search;
         exp.getExpenses();
     };
+    $scope.$on("reloadGrid", function (e) {
+        $scope.$apply(function () {
+            exp.getExpenses();
+        });
+    });
 });
