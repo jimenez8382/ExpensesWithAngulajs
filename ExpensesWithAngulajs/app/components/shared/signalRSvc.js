@@ -11,14 +11,14 @@
             connection.start();
 
             //Publishing an event when server pushes a greeting message
-            this.proxy.on('gridUpdated', function () {
-                $rootScope.$broadcast("reloadGrid");
+            this.proxy.on('gridUpdated', function (expenseId) {
+                $rootScope.$broadcast("reloadGrid", { expenseId: expenseId } );
             });
         };
 
-        var sendRequest = function () {
+        var sendRequest = function (expenseId) {
             //Invoking greetAll method defined in hub
-            this.proxy.invoke('UpdateGrid');
+            this.proxy.invoke('UpdateGrid', expenseId);
         };
 
         return {

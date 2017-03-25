@@ -8,9 +8,9 @@ namespace ExpensesWithAngulajs.Hubs
 {
     public class ExpensesHub : Hub
     {
-        public void UpdateGrid()
+        public void UpdateGrid(int expenseId)
         {
-            Clients.All.gridUpdated();
+            Clients.All.gridUpdated(expenseId);
         }
     }
 }

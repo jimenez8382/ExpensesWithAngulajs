@@ -71,4 +71,3 @@ D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.AspNet.Signal
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.Owin.xml
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.Owin.Host.SystemWeb.xml
 D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\bin\Microsoft.Owin.Security.xml
-D:\Project\ExpensesWithAngulajs\ExpensesWithAngulajs\obj\Debug\ExpensesWithAngulajs.csprojResolveAssemblyReference.cache

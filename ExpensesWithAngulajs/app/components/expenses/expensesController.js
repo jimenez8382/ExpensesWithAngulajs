@@ -4,6 +4,9 @@
     signalRSvc.initialize();
 
     // Initialize the main params.
+    $scope.MyRowClass = "NoClass";
+    $scope.expenseId = 0;
+    $scope.pageSize = 10;
     $scope.pageSize = 10;
     $scope.currentPage = 1;
     $scope.TotalRows = 1;
@@ -113,9 +116,16 @@
         $scope.search = search;
         exp.getExpenses();
     };
-    $scope.$on("reloadGrid", function (e) {
+    $scope.$on("reloadGrid", function (e, args) {
         $scope.$apply(function () {
+            $scope.expenseId = args.expenseId;
             exp.getExpenses();
         });
+    });
+    $scope.$watch('MyRowClass', function (newValue, oldValue) {
+        $(".ItemChanged").addClass("ItemChanged").delay(2000).queue(function () {
+            $(".ItemChanged").removeClass("ItemChanged").dequeue();
+        });
+
     });
 });

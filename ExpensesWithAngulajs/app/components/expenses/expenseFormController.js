@@ -27,7 +27,7 @@
             webApiServices.update('/api/Expenses/' + expense.Id, expense).then(// success
 
             function (d) {
-                signalRSvc.sendRequest();
+                signalRSvc.sendRequest(expense.Id);
             },// error
             function (error) { });
 
@@ -37,7 +37,7 @@
                 $scope.expense.Id = d.Id;//update the Id of the Expense added
                 $scope.Mode = 'Edit the expense # ' + d.Id;
                 $location.update_path('/expense/' + d.Id)
-                signalRSvc.sendRequest();
+                signalRSvc.sendRequest(d.Id);
             },// error
             // error
             function (error) {

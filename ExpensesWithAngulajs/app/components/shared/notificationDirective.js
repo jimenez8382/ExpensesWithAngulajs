@@ -9,7 +9,7 @@ appDirectives.directive('notification', function () {
             callbackbuttonclose: '&ngClickCloseButton'
         },
         transclude: true,
-        controller: function ($scope, $rootScope) {
+        controller: function ($scope, $rootScope, $timeout) {
 
             $rootScope.message = {
                 success: "success",
@@ -17,11 +17,17 @@ appDirectives.directive('notification', function () {
                 text: "",
                 title: ""
             };
-
-            //$scope.CloseAlert = function (value) {
-            //    $scope[value] = false;
-
-            //};
+            $scope.$watch('message.show', function (newValue, oldValue) {
+                if (newValue == true) {
+                    $(".alert").fadeIn(500);
+                    $(".alert").delay(1000).slideUp(500, function () {
+                        $rootScope.message.show = false;
+                    });
+                } else {
+                    $rootScope.message.show = false;
+                }
+               
+            });
         },
     }
 });
