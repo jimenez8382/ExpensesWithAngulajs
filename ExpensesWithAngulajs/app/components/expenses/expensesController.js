@@ -1,4 +1,4 @@
-﻿appControllers.controller('expensesController', function ($, $rootScope,signalRSvc, $scope, webApiServices, dataGridService) {
+﻿appControllers.controller('expensesController', ['$', '$rootScope', 'signalRSvc', '$scope', 'webApiServices', 'dataGridService', function ($, $rootScope, signalRSvc, $scope, webApiServices, dataGridService) {
     var exp = this;
 
     signalRSvc.initialize();
@@ -128,4 +128,4 @@
         });
 
     });
-});
+}]);

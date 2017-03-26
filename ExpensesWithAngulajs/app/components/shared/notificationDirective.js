@@ -9,7 +9,7 @@ appDirectives.directive('notification', function () {
             callbackbuttonclose: '&ngClickCloseButton'
         },
         transclude: true,
-        controller: function ($scope, $rootScope, $timeout) {
+        controller:['$scope', '$rootScope', '$timeout', function ($scope, $rootScope, $timeout) {
 
             $rootScope.message = {
                 success: "success",
@@ -28,6 +28,6 @@ appDirectives.directive('notification', function () {
                 }
                
             });
-        },
+        }],
     }
 });

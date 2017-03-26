@@ -1,4 +1,4 @@
-﻿appApiServices.service('webApiServices', function ($http, blockUI, $rootScope) {
+﻿appApiServices.service('webApiServices',['$http','blockUI','$rootScope', function ($http, blockUI, $rootScope) {
     // Services should return the promise rather than the data. This is the asynchronous way.
     return {
         get: function (resourceUrl) {
@@ -128,4 +128,4 @@
         },
     }
 
-});
+}]);

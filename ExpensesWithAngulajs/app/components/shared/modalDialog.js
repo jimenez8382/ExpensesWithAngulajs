@@ -12,8 +12,8 @@ appDirectives.directive('modalcustom', function () {
             handler: '=lolo'
         },
         transclude: true,
-        controller: function ($scope) {
+        controller:['$scope', function ($scope) {
             $scope.handler = 'pop';
-        },
+        }],
     }
 });

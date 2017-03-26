@@ -1,4 +1,4 @@
-﻿appControllers.controller('reportController', function ($scope, webApiServices) {
+﻿appControllers.controller('reportController', ['$scope', 'webApiServices', function ($scope, webApiServices) {
     var rpt = this;
     rpt.Expenses = {
 
@@ -10,4 +10,4 @@
         });
     }
     $scope.getExpenses();
-});
+}]);

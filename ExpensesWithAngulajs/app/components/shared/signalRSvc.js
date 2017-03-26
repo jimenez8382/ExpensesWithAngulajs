@@ -1,4 +1,4 @@
-﻿appApiServices.service('signalRSvc', function ($, $rootScope) {
+﻿appApiServices.service('signalRSvc',['$','$rootScope', function ($, $rootScope) {
         var proxy = null;
         var initialize = function () {
             //Getting the connection object
@@ -25,4 +25,4 @@
             initialize: initialize,
             sendRequest: sendRequest
         };
-    });
+    }]);

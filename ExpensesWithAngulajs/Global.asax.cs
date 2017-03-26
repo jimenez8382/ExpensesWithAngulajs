@@ -16,7 +16,7 @@ namespace ExpensesWithAngulajs
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundlesConfig.RegisterBundles(BundleTable.Bundles);
-            //RouteTable.Routes.MapHubs();
+            BundleTable.EnableOptimizations = true;
         }
     }
 }

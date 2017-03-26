@@ -1,6 +1,7 @@
 ﻿/// <reference path="components/expenses/expenses.html" />
 /// <reference path="components/expenses/expenses.html" />
-app.config(function ($routeProvider, $locationProvider) {
+app.config([
+    '$routeProvider','$locationProvider',function ($routeProvider, $locationProvider) {
     // use the HTML5 History API & set HTM5 mode true
     $locationProvider.html5Mode(true);
     $routeProvider
@@ -37,4 +38,4 @@ app.config(function ($routeProvider, $locationProvider) {
             //templateUrl: 'app/components/expenses/expenses.html'
         })
         .otherwise({ redirectTo: '/expenses' });
-});
+}]);

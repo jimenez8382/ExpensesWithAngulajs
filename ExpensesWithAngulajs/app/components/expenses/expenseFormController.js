@@ -1,4 +1,4 @@
-﻿appControllers.controller('expenseFormController', function ($, $rootScope, $scope,signalRSvc, webApiServices, $routeParams, $location) {
+﻿appControllers.controller('expenseFormController', ['$', '$rootScope', '$scope', 'signalRSvc', 'webApiServices', '$routeParams','$location', function ($, $rootScope, $scope,signalRSvc, webApiServices, $routeParams, $location) {
     signalRSvc.initialize();
     //Updating greeting message after receiving a message through the event
     var exp = this;
@@ -60,4 +60,4 @@
         ////$scope[value] = !$scope[value];
         $rootScope.message.show = false;
     };
-});
+}]);

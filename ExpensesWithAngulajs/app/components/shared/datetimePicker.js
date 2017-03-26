@@ -8,7 +8,7 @@ appDirectives.directive('datetimepickercustom', function () {
             tabindex: "=tabindex",
         },
         transclude: true,
-        controller: function ($scope) {
+        controller:['$scope', function ($scope) {
 
             $scope.opened = true;
             var currentTime = new Date();
@@ -36,6 +36,6 @@ appDirectives.directive('datetimepickercustom', function () {
             }
 
             $("#date_root").addClass("picker--opened");
-        },
+        }],
     }
 });
