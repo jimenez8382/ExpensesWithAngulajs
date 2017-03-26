@@ -12,6 +12,7 @@ namespace ExpensesWithAngulajs.App_Start
 
             //Angular scripts
             RegisterAngularJs(bundles);
+            RegistersignalR(bundles);
         }
 
         private static void RegisterStyles(BundleCollection bundles)
@@ -24,7 +25,7 @@ namespace ExpensesWithAngulajs.App_Start
                      .Include("~/Content/icon.css")
                 );
         }
-
+        
         private static void RegisterScripts(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include("~/Scripts/jquery-{version}.js"));
@@ -48,6 +49,13 @@ namespace ExpensesWithAngulajs.App_Start
 
                // Include all components
                .IncludeDirectory("~/app/components/", "*.js", true));
+        }
+        private static void RegistersignalR(BundleCollection bundles)
+        {
+              bundles.Add(new ScriptBundle("~/bundles/signalR")
+                .Include("~/Scripts/jquery.signalR-2.1.2.min.js")
+                 .Include("~/Scripts/hubs.js")
+            );
         }
     }
 }
